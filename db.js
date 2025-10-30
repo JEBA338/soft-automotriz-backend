@@ -1,3 +1,6 @@
+const mysql = require('mysql2');      
+require('dotenv').config();
+
 // Crear conexión usando solo variables de entorno
 const con = mysql.createConnection({
     host: process.env.DB_HOST,       // Por ejemplo, Railway te dará algo como containers-us-west-1.railway.app
