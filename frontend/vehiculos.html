@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vehículos | Soft Automotriz</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>Gestión de Vehículos</h1></header>
+<nav>
+  <a href="clientes.html">Clientes</a>
+  <a href="vehiculos.html">Vehículos</a>
+  <a href="tecnicos.html">Técnicos</a>
+  <a href="alertas.html">Alertas</a>
+  <a href="#" id="linkUsuarios">Usuarios</a>
+  <button id="btnLogout">Cerrar sesión</button>
+</nav>
+<main>
+<h2>Registrar Vehículo</h2>
+
+<!-- ID Cliente -->
+<label for="idClienteVehiculo">Cliente:</label>
+<input list="clientesLista" id="idClienteVehiculo" placeholder="Seleccione Cliente">
+<datalist id="clientesLista"></datalist>
+
+<!-- Marca, Modelo, Año -->
+<label for="marca">Marca:</label>
+<input list="marcasLista" id="marca" placeholder="Seleccione Marca">
+<datalist id="marcasLista"></datalist>
+
+<label for="modelo">Modelo:</label>
+<input list="modelosLista" id="modelo" placeholder="Seleccione Modelo">
+<datalist id="modelosLista"></datalist>
+
+<label for="anio">Año:</label>
+<input list="aniosLista" id="anio" placeholder="Seleccione Año">
+<datalist id="aniosLista"></datalist>
+
+<label for="placa">Placa:</label>
+<input type="text" id="placa" placeholder="Placa">
+
+<label for="kilometrajeactual">Kilometraje Actual:</label>
+<input type="number" id="kilometrajeactual" placeholder="Kilometraje Actual">
+
+<button id="btnAgregarVehiculo">Agregar Vehículo</button>
+
+<h3>Lista de Vehículos</h3>
+<table id="tablaVehiculos">
+<thead>
+<tr>
+<th>ID</th><th>Cliente</th><th>Marca</th><th>Modelo</th><th>Año</th><th>Placa</th><th>Kilometraje</th><th>Acciones</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+</main>
+<script src="session.js"></script>
+<script src="vehiculos.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Técnicos | Soft Automotriz</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>Gestión de Técnicos</h1></header>
+<nav>
+  <a href="clientes.html">Clientes</a>
+  <a href="vehiculos.html">Vehículos</a>
+  <a href="tecnicos.html">Técnicos</a>
+  <a href="alertas.html">Alertas</a>
+  <a href="#" id="linkUsuarios">Usuarios</a>
+  <button id="btnLogout">Cerrar sesión</button>
+</nav>
+<main>
+<h2>Registrar Técnico</h2>
+<input type="text" id="nombreTecnico" placeholder="Nombre">
+<input type="text" id="telefonoTecnico" placeholder="Teléfono">
+<input type="text" id="especialidadTecnico" placeholder="Especialidad">
+<button id="btnAgregarTecnico">Agregar Técnico</button>
+
+<h3>Lista de Técnicos</h3>
+<table id="tablaTecnicos">
+<thead>
+<tr>
+  <th>ID</th>
+  <th>Nombre</th>
+  <th>Teléfono</th>
+  <th>Especialidad</th>
+  <th>Acciones</th> <!-- Columna agregada -->
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+</main>
+<script src="session.js"></script>
+<script src="tecnicos.js"></script>
+</body>
+</html>

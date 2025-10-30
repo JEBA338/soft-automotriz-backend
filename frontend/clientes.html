@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clientes | Soft Automotriz</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>Gestión de Clientes</h1></header>
+<nav>
+  <a href="clientes.html">Clientes</a>
+  <a href="vehiculos.html">Vehículos</a>
+  <a href="tecnicos.html">Técnicos</a>
+  <a href="alertas.html">Alertas</a>
+  <a href="#" id="linkUsuarios">Usuarios</a>
+  <button id="btnLogout">Cerrar sesión</button>
+</nav>
+<main>
+<h2>Registrar Cliente</h2>
+<input type="text" id="nombreCliente" placeholder="Nombre">
+<input type="text" id="apellidoCliente" placeholder="Apellido">
+<input type="text" id="telefonoCliente" placeholder="Teléfono">
+<input type="email" id="correoCliente" placeholder="Correo">
+<button id="btnAgregarCliente">Agregar Cliente</button>
+
+<h3>Lista de Clientes</h3>
+<table id="tablaClientes">
+<thead>
+<tr>
+  <th>ID</th>
+  <th>Nombre</th>
+  <th>Apellido</th>
+  <th>Teléfono</th>
+  <th>Correo</th>
+  <th>Acciones</th> <!-- Columna agregada -->
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+</main>
+<script src="session.js"></script>
+<script src="clientes.js"></script>
+</body>
+</html>

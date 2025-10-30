@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alertas | Soft Automotriz</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- Flatpickr CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+<header>
+  <h1>Gestión de Alertas</h1>
+</header>
+<nav>
+  <a href="clientes.html">Clientes</a>
+  <a href="vehiculos.html">Vehículos</a>
+  <a href="tecnicos.html">Técnicos</a>
+  <a href="alertas.html">Alertas</a>
+  <a href="#" id="linkUsuarios">Usuarios</a>
+  <button id="btnLogout">Cerrar sesión</button>
+</nav>
+
+<main>
+<section>
+  <h2>Crear Alerta</h2>
+  <form id="formAlerta">
+    <label for="idVehiculo">Vehículo</label>
+    <input list="vehiculosLista" id="idVehiculo" placeholder="ID Vehículo" required>
+    <datalist id="vehiculosLista"></datalist>
+
+    <label for="idTecnico">Técnico</label>
+    <select id="idTecnico" required>
+      <option value="">Seleccione Técnico</option>
+    </select>
+
+    <label for="descripcion">Descripción</label>
+    <input type="text" id="descripcion" placeholder="Descripción" required>
+
+    <!-- Input con calendario visual + selector de hora -->
+    <label for="fechaProgramada">Fecha y Hora</label>
+    <input type="text" id="fechaProgramada" placeholder="Seleccione fecha y hora" required>
+
+    <label for="kilometrajeProgramado">Kilometraje</label>
+    <input type="number" id="kilometrajeProgramado" placeholder="Kilometraje programado">
+
+    <button type="submit">Crear Alerta</button>
+  </form>
+  <p id="mensajeAlerta" style="color:green;"></p>
+</section>
+
+<section>
+<h3>Lista de Alertas</h3>
+<table id="tablaAlertas">
+<thead>
+<tr>
+<th>ID</th><th>Vehículo</th><th>Técnico</th><th>Usuario</th><th>Descripción</th>
+<th>Fecha Programada</th><th>Fecha Envío</th><th>Kilometraje</th><th>Estado</th><th>Acciones</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+</section>
+</main>
+
+<script src="session.js"></script>
+<script src="alertas.js"></script>
+
+<!-- Flatpickr JS -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+  flatpickr("#fechaProgramada", {
+      enableTime: true,        // permite seleccionar hora
+      dateFormat: "Y-m-d H:i", // formato año-mes-día hora:minuto
+      time_24hr: true          // usa formato 24 horas
+  });
+</script>
+
+</body>
+</html>
